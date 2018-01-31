@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Document</title>
   <style>
-    .circle {
-      border-radius: 100px;
-      height: 100px;
-      width: 100px;
-      background-color: red;
-    }
-    .semi-circle {
-      border-radius: 100px 100px 0 0;
-      width: 100px;
-      height: 50px;
-      background-color: red;
-    }
-    .sector {
-      border-radius: 50px 0 0;
-      width: 50px;
-      height: 50px;
-      background-color: red;
-    }
-    .sector2 {
-      border: 50px solid;
-      border-radius: 50px;
-      width: 0;
-      height: 0;
-      border-color: yellow blue pink orange;
-    }
-    .sector3 {
-      border: 50px solid;
-      border-radius: 50px;
-      width: 0;
-      height: 0;
-      border-color: red transparent transparent;
-    }
-    .triangle {
-      width: 0;
-      height: 0;
-      border: 50px solid;
-      border-top-color: yellow;
-      border-right-color: blue;
-      border-bottom-color: pink;
-      border-left-color: orange;
-    }
-    .arrow {
-      width: 0;
-      height: 0;
-      border: 50px solid;
-      border-color: red transparent transparent;
-    }
-    .arc {
-      width: 50px;
-      height: 50px;
-      border-radius: 100px 0;
-      background-color: red;
-    }
-    .arc2 {
-      width: 50px;
-      height: 50px;
-      border-radius: 100px 0;
-      background-color: red;
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
+  .circle {
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+  }
+
+  .semi-circle {
+    border-radius: 100px 100px 0 0;
+    width: 100px;
+    height: 50px;
+    background-color: red;
+  }
+
+  .sector {
+    border-radius: 50px 0 0;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+  }
+
+  .sector2 {
+    border: 50px solid;
+    border-radius: 50px;
+    width: 0;
+    height: 0;
+    border-color: yellow blue pink orange;
+  }
+
+  .sector3 {
+    border: 50px solid;
+    border-radius: 50px;
+    width: 0;
+    height: 0;
+    border-color: red transparent transparent;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border: 50px solid;
+    border-top-color: yellow;
+    border-right-color: blue;
+    border-bottom-color: pink;
+    border-left-color: orange;
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    border: 50px solid;
+    border-color: red transparent transparent;
+  }
+
+  .arc {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px 0;
+    background-color: red;
+  }
+
+  .arc2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px 0;
+    background-color: red;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
   </style>
 </head>
+
 <body>
   <div class="circle"></div>
   <div class="semi-circle"></div>
@@ -78,5 +89,90 @@
   <div class="arrow"></div>
   <div class="arc"></div>
   <div class="arc2"></div>
+  <style>
+  .chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background-color: gray;
+  }
+  .chart .hold {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    clip: rect(0px,200px,200px,100px);
+  }
+  .chart .pie {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    clip: rect(0px,100px,200px,0px);
+    border-radius: 100px;
+  }
+  .one {
+    transform: rotate(116.28deg);
+  }
+  .one .pie {
+    background-color: red;
+    transform: rotate(109.8deg);
+  }
+  .two {
+    transform: rotate(0deg);
+  }
+  .two .pie {
+    background-color: yellow;
+    transform: rotate(116.28deg);
+  }
+  .three {
+    transform: rotate(226.08deg);
+  }
+  .three .pie {
+    background-color: purple;
+    transform: rotate(10.08deg);
+  }
+  .four {
+    transform: rotate(236.16deg);
+  }
+  .four .pie {
+    background-color: darkcyan;
+    transform: rotate(6.12deg);
+  }
+  .five {
+    transform: rotate(242.28deg);
+  }
+  .five .pie {
+    background-color: salmon;
+    transform: rotate(5.76deg);
+  }
+  .six {
+    transform: rotate(248.04deg);
+  }
+  .six .pie {
+    background-color: green;
+    transform: rotate(111.96deg);
+  }
+  </style>
+  <div class="chart">
+    <div class="hold one">
+      <div class="pie"></div>
+    </div>
+    <div class="hold two">
+      <div class="pie"></div>
+    </div>
+    <div class="hold three">
+      <div class="pie"></div>
+    </div>
+    <div class="hold four">
+      <div class="pie"></div>
+    </div>
+    <div class="hold five">
+      <div class="pie"></div>
+    </div>
+    <div class="hold six">
+      <div class="pie"></div>
+    </div>
+  </div>
 </body>
+
 </html>
